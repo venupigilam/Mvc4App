@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+//Ref : https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-controller
 namespace Mvc4App.Controllers
 {
     public class HelloWorldController : Controller
@@ -11,10 +11,10 @@ namespace Mvc4App.Controllers
         //
         // GET: /HelloWorld/
 
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
 
         // 
         // GET: /HelloWorld/ 
@@ -27,9 +27,14 @@ namespace Mvc4App.Controllers
         // 
         // GET: /HelloWorld/Welcome/ 
 
-        public string Welcome()
+        //public string Welcome()
+        //{
+        //    return "This is the Welcome action method...";
+        //} 
+
+        public string Welcome(string name, int numTimes = 1)
         {
-            return "This is the Welcome action method...";
-        } 
+            return HttpUtility.HtmlEncode("Name : " + name + ", No.of Times : " + numTimes);
+        }
     }
 }
