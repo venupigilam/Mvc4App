@@ -11,15 +11,15 @@ namespace Mvc4App.Controllers
         //
         // GET: /HelloWorld/
 
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
+        public ActionResult Index()
+        {
+            return View();
+        }
 
         // 
         // GET: /HelloWorld/ 
 
-        public string Index()
+        public string Index1()
         {
             return "This is my <b>default</b> action...";
         }
